@@ -1,0 +1,138 @@
+#pragma METAINFO("MK11_KlassicTower_Novice", 1, 0, "Zulghinlour")
+
+#include <xb1.gph>
+
+#define BUTTON_WAIT	100
+#define SECOND_WAIT 1000
+#define THREE_SECOND_WAIT 3 * SECOND_WAIT
+#define FIVE_SECOND_WAIT 5 * SECOND_WAIT
+#define SEVEN_SECOND_WAIT 7 * SECOND_WAIT
+#define TEN_SECOND_WAIT 10 * SECOND_WAIT
+#define FIFTEEN_SECOND_WAIT 15 * SECOND_WAIT
+#define THIRTY_SECOND_WAIT 30 * SECOND_WAIT
+
+int iScriptActive = FALSE;
+
+main {
+	if (check_active(XB1_LB,1000))
+	{	
+		printf("Starting script");
+		iScriptActive = !iScriptActive;
+	}
+
+	if (iScriptActive)
+	{
+		combo_run(cMK11Tower);
+	}
+}
+
+combo cMK11Tower 
+{
+	printf("Press A - Start game");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("Press A - Choose Scorpion");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("Press X - Make him an AI");
+	set_val(XB1_X, 100); wait(BUTTON_WAIT); set_val(XB1_X, 0); wait(BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("Press A - Confirm Scorpion");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("DPAD Left - Switch to Easy difficulty");
+	set_val(BUTTON_12, 100); wait(BUTTON_WAIT); set_val(BUTTON_12, 0); wait (BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("Press A - Confirm Difficulty");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Confirm first fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Skip Fight Intro");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT);
+	printf("Wait 105 seconds");
+    wait(FIFTEEN_SECOND_WAIT);
+	printf("Wait 90 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 60 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 30 seconds");
+    wait(THIRTY_SECOND_WAIT);
+		
+	printf("Press A - Claim extra rewards (optional)");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Move to next fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Confirm second fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Skip Fight Intro");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT);
+	printf("Wait 105 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 90 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 60 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 30 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	
+	printf("Press A - Claim extra rewards (optional)");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Move to next fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Confirm third fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Skip Fight Intro");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT);
+	printf("Wait 105 seconds");
+    wait(FIFTEEN_SECOND_WAIT);
+	printf("Wait 90 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 60 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 30 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	
+	printf("Press A - Claim extra rewards (optional)");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Move to next fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Confirm fourth fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(SEVEN_SECOND_WAIT);
+	printf("Press A - Skip Fight Intro");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT);
+	printf("Wait 105 seconds");
+    wait(FIFTEEN_SECOND_WAIT);
+	printf("Wait 90 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 60 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 30 seconds");
+    wait(THIRTY_SECOND_WAIT);
+
+	printf("Press A - Claim extra rewards (optional)");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Move to Kronika fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Confirm Kronika fight");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(TEN_SECOND_WAIT);
+	printf("Press A - Skip Fight Intro");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT);
+	printf("Wait 150 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 120 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 90 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 60 seconds");
+    wait(THIRTY_SECOND_WAIT);
+	printf("Wait 30 seconds");
+    wait(THIRTY_SECOND_WAIT);
+
+	printf("Press A - Skip final cut scene");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(FIVE_SECOND_WAIT);
+	printf("Press A - Skip credits");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(FIVE_SECOND_WAIT);
+	printf("Press A - Skip credits part 2");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(FIVE_SECOND_WAIT);
+	printf("Press A - Skip point total");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(THREE_SECOND_WAIT);
+	printf("Press A - Accept point total");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(FIVE_SECOND_WAIT);
+	printf("Press A - Accept tower rewards");
+	set_val(XB1_A, 100); wait(BUTTON_WAIT); set_val(XB1_A, 0); wait(BUTTON_WAIT); wait(FIVE_SECOND_WAIT);
+}
